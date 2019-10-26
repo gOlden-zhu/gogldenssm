@@ -20,6 +20,11 @@ public class ProductServiceImpl implements IProductService {
     @Autowired
     private IProductDao productDao;
 
+    @Override
+    public Product findById(String id) {
+        return productDao.findById(id);
+    }
+
     //查询所有商品
     @Override
     public List<Product> findAll() {

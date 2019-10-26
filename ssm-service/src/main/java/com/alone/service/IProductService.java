@@ -10,6 +10,9 @@ import java.util.List;
  * 服务层接口
  */
 public interface IProductService {
+
+    //查询单个
+    public Product findById(String id);
     //查询所有
     public List<Product> findAll();
     //保存
