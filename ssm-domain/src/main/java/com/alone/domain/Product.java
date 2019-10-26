@@ -2,6 +2,7 @@ package com.alone.domain;
 
 import java.util.Date;
 import com.alone.golden.utils.DataUtil;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * @author:_AloneBoy
@@ -14,6 +15,8 @@ public class Product {
     private String productNum; // 编号 唯一
     private String productName; // 名称
     private String cityName; // 出发城市
+    //局部强制类型转换
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date departureTime; // 出发时间
     private String departureTimeStr;
     private double productPrice; // 产品价格
@@ -63,7 +66,7 @@ public class Product {
 
     public String getDepartureTimeStr() {
         if(departureTime!=null){
-            departureTimeStr=DataUtil.data2String(departureTime,"yyyy-mm-DD HH:MM:ss");
+            departureTimeStr=DataUtil.data2String(departureTime,"yyyy-MM-dd HH:mm:ss");
         }
         return departureTimeStr;
     }

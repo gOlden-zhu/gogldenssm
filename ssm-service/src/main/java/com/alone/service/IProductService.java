@@ -12,4 +12,6 @@ import java.util.List;
 public interface IProductService {
     //查询所有
     public List<Product> findAll();
+    //保存
+    public void save(Product product);
 }

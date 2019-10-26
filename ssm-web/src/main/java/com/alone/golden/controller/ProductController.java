@@ -20,6 +20,7 @@ public class ProductController {
     @Autowired
     private IProductService productService;
 
+    //查询所有
     @RequestMapping("/findAll.do")
     public ModelAndView findAll(){
         ModelAndView mv=new ModelAndView();
@@ -27,5 +28,11 @@ public class ProductController {
         mv.addObject("productList",products);
         mv.setViewName("product-list");
         return mv;
+    }
+    //保存
+    @RequestMapping("/save.do")
+    public String save(Product product){
+        productService.save(product);
+        return "redirect:findAll.do";
     }
 }

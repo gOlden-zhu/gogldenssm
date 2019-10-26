@@ -4,6 +4,6 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<a href="${pageContext.request.contextPath}/product/findAll.do">查询所有的商品列表</a>
+<jsp:forward page="/pages/main.jsp"/>
 </body>
 </html>
