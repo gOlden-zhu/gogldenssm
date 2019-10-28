@@ -56,6 +56,13 @@ public class Traveller {
     }
 
     public String getCredentialsTypeStr() {
+        //0-身份证 1-护照 2-军官证
+        if (credentialsType==0)
+            credentialsTypeStr="身份证";
+        else if (credentialsType==1)
+            credentialsTypeStr="护照";
+        else if (credentialsType==2)
+            credentialsTypeStr="军官证";
         return credentialsTypeStr;
     }
 
@@ -80,6 +87,11 @@ public class Traveller {
     }
 
     public String getTravellerTypeStr() {
+        //0-成人 1-儿童
+        if (travellerType==0)
+            travellerTypeStr="成人";
+        else if (travellerType==1)
+            travellerTypeStr="儿童";
         return travellerTypeStr;
     }
 

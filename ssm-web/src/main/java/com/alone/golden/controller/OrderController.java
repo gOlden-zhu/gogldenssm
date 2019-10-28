@@ -30,4 +30,13 @@ public class OrderController {
         mv.setViewName("orders-list");
         return mv;
     }
+
+    //查询订单详情
+    @RequestMapping("/findById")
+    public ModelAndView findById(@RequestParam(name = "id") String id){
+        ModelAndView modelAndView=new ModelAndView();
+        modelAndView.addObject("orders",orderService.findById(id));
+        modelAndView.setViewName("orders-show");
+        return modelAndView;
+    }
 }
